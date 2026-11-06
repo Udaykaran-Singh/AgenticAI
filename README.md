@@ -1,23 +1,33 @@
-# Agentic AI 🤖
+# Agentic AI
 
-A hands-on collection of implementations, experiments, and learning resources focused on **Agentic AI, Large Language Models (LLMs), and AI application development**.
+A structured collection of **Agentic AI concepts, practical implementations, and Python projects**, covering Large Language Models (LLMs), LLM-powered applications, Retrieval-Augmented Generation (RAG), AI agents, and stateful workflow orchestration.
 
-This repository documents my journey of exploring the modern AI ecosystem, with practical implementations using LangChain, LangGraph, and LangSmith.
+This repository contains my learning journey through the modern AI ecosystem, with hands-on implementations, experiments, and practical examples using LangChain, LangGraph, LangSmith, and various LLM providers.
 
-The goal is to understand how LLM-powered applications work, build intelligent workflows, implement Retrieval-Augmented Generation (RAG), and develop autonomous AI agents.
+## Topics Covered
 
-## 📚 Technologies & Frameworks
+| No. | Topic | Concepts |
+|---|---|---|
+| 01 | LangChain – Models | Large Language Models (LLMs), Chat Models, Embedding Models |
+| 02 | Prompt Engineering | Prompt Templates, Chat Prompts, Message Placeholders |
+| 03 | Structured Outputs | TypedDict, Pydantic, JSON Schema, Structured Response Generation |
+| 04 | Output Parsers | String Output Parser, JSON Output Parser, Pydantic Output Parser |
+| 05 | Chains | Simple Chains, Sequential Chains, Parallel Chains, Conditional Chains |
+| 06 | Runnables | Runnable Sequence, Runnable Parallel, Runnable Branch, Runnable Lambda, Runnable Passthrough |
+| 07 | Retrieval-Augmented Generation (RAG) | Document Loaders, Text Splitters, Vector Stores, Embeddings, Retrieval Pipelines |
+| 08 | AI Agents | Agent Architecture, Tool Calling, Tool Integration, Agent Execution |
+| 09 | LangGraph – Workflows | Basic LLM Workflows, Prompt Chaining, Parallel Workflows, Conditional Workflows, Loop-based Workflows |
+| 10 | LangGraph – Chatbots | Basic Chatbots, Stateful Chatbots, Conversational Workflows |
+| 11 | Memory and Persistence | Short-Term Memory (STM), Long-Term Memory (LTM), Persistence, Database-backed Memory |
+| 12 | Tool Integration and MCP | Tool Calling, Model Context Protocol (MCP), External Tool Integration |
+| 13 | LangGraph – RAG | RAG-based Workflows, Retrieval Integration, Context-aware Chatbots |
+| 14 | Human-in-the-Loop (HITL) | Human Approval, Interruptions, Human-in-the-Loop Workflows |
+| 15 | Subgraphs | Subgraphs, Shared State, Modular Workflow Design |
+| 16 | LangSmith | LLM Tracing, Debugging, Monitoring, Observability, Application Evaluation |
 
-- **Python** – Primary programming language
-- **LangChain** – Framework for building LLM-powered applications
-- **LangGraph** – Stateful, multi-step AI workflows and agent orchestration
-- **LangSmith** – Debugging, tracing, monitoring, and evaluating LLM applications
-- **OpenAI** – Large Language Models and embeddings
-- **Anthropic** – Claude models
-- **Google AI** – Gemini models
-- **Hugging Face** – Open-source models and embeddings
+## Repository Structure
 
-## 📂 Repository Structure
+The repository is organized framework-wise, with separate directories for LangChain, LangGraph, and LangSmith implementations.
 
 ```text
 AgenticAI/
@@ -77,69 +87,22 @@ AgenticAI/
 └── .gitignore
 ```
 
-## 🧠 Topics Covered
+*Note: The directory names and numbering above follow the current local repository structure.*
 
-### 1. LangChain
+## Tech Stack
 
-Exploring the core components of LangChain for developing LLM-powered applications.
+- **Programming Language:** Python
+- **Development Environment:** Jupyter Notebook, VS Code
+- **LLM Framework:** LangChain
+- **Workflow Orchestration:** LangGraph
+- **LLM Observability:** LangSmith
+- **LLM Providers:** OpenAI, Anthropic, Google AI
+- **Open-Source Models:** Hugging Face
+- **Data Validation:** Pydantic
+- **Configuration Management:** Python-dotenv
+- **APIs and Integrations:** Model APIs, Tools, MCP
 
-| Topic | Concepts |
-|---|---|
-| Models | LLMs, Chat Models, Embedding Models |
-| Prompts | Prompt Templates, Chat Prompts, Message Placeholders |
-| Structured Outputs | TypedDict, Pydantic, JSON Schema |
-| Output Parsers | String, JSON, Pydantic, Structured Output |
-| Chains | Simple, Sequential, Parallel, Conditional Chains |
-| Runnables | Sequence, Parallel, Branch, Lambda, Passthrough |
-| RAG | Document Loaders, Text Splitters, Vector Stores, Retrieval |
-| Agents | Tools, Tool Calling, Agent Execution |
-
-### 2. LangGraph
-
-Learning to build stateful and controllable AI workflows using graph-based orchestration.
-
-**Topics and implementations:**
-
-- Basic LLM workflows
-- Prompt Chaining
-- Parallel Workflows
-- Conditional Workflows
-- Loop-based Workflows
-- AI Chatbots
-- Persistence and Memory
-- Tool Integration
-- Model Context Protocol (MCP)
-- Retrieval-Augmented Generation (RAG)
-- Human-in-the-Loop (HITL)
-- Subgraphs and Shared State
-- Short-Term Memory (STM)
-- Long-Term Memory (LTM)
-- Database-backed Memory
-
-**Additional Implementations:**
-
-- Chatbot with and without Human-in-the-Loop
-- LangGraph Chatbot with Tool Calling
-- RAG-based Chatbot
-- Database-integrated Chatbot
-- MCP-integrated Chatbot
-- Streaming and Threading
-- Memory Management
-
-### 3. LangSmith
-
-Exploring observability, debugging, and monitoring for LLM applications.
-
-**Topics covered:**
-
-- LLM Tracing
-- Sequential Chain Monitoring
-- RAG Application Tracing
-- Agent Execution Tracking
-- LangGraph Tracing
-- Debugging and Observability
-
-## ⚙️ Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -153,7 +116,7 @@ git clone https://github.com/Udaykaran-Singh/AgenticAI.git
 cd AgenticAI
 ```
 
-### 3. Create a Virtual Environment
+### 3. Create a Virtual Environment (Optional)
 
 ```bash
 python -m venv .venv
@@ -162,13 +125,11 @@ python -m venv .venv
 Activate it:
 
 **macOS / Linux**
-
 ```bash
 source .venv/bin/activate
 ```
 
 **Windows**
-
 ```bash
 .venv\Scripts\activate
 ```
@@ -181,53 +142,61 @@ pip install -r requirements.txt
 
 ### 5. Configure API Keys
 
-Create a `.env` file in the project root:
+Create a `.env` file in the project root and add the required API credentials:
 
 ```env
 OPENAI_API_KEY=your_openai_api_key
 ANTHROPIC_API_KEY=your_anthropic_api_key
 GOOGLE_API_KEY=your_google_api_key
+
 LANGCHAIN_API_KEY=your_langsmith_api_key
 LANGCHAIN_TRACING_V2=true
 LANGCHAIN_PROJECT=AgenticAI
 ```
 
-Never commit your `.env` file or expose API keys publicly.
+*Note: Configure only the API keys required for the particular implementation. Never commit your `.env` file or expose API keys publicly.*
 
 ### 6. Run Examples
 
-For LangChain:
+**For LangChain:**
 
 ```bash
 python LangChain/1_Models/1_LLMs/llm_demo.py
 ```
 
-For LangGraph:
+**For LangGraph:**
 
-Open the notebooks inside the `LangGraph/` directory using Jupyter Notebook or VS Code.
+Open the Jupyter notebooks inside the `LangGraph/` directory using Jupyter Notebook or VS Code.
 
-For LangSmith:
+```bash
+jupyter notebook
+```
+
+**For LangSmith:**
 
 ```bash
 python LangSmith/1_simple_llm_call.py
 ```
 
-## 🎯 Learning Objectives
+## Learning Resource
 
-- Understand the architecture and capabilities of Large Language Models.
-- Build LLM-powered applications using LangChain.
-- Implement prompt engineering and structured output generation.
-- Develop RAG pipelines using document loaders, text splitters, and vector stores.
-- Build intelligent agents with tool-calling capabilities.
-- Design stateful and multi-agent workflows using LangGraph.
-- Implement short-term and long-term memory.
-- Explore Human-in-the-Loop interactions and MCP.
-- Monitor, debug, and evaluate AI applications using LangSmith.
+The concepts and practical implementations in this repository are based on my self-learning and practice, including the **CampusX Agentic AI learning resources**.
 
-## 📈 Progress
+- [CampusX – YouTube Channel](https://www.youtube.com/@campusx-official)
 
-This repository is an ongoing collection of my Agentic AI learning journey. It will continue to evolve with new experiments, implementations, and projects as I explore the rapidly growing ecosystem of AI agents and LLM applications.
+## Purpose
+
+The goal of this repository is to maintain an organized collection of my Agentic AI notes, practical implementations, experiments, and coding exercises while strengthening my understanding of LLM-powered applications, intelligent agents, RAG pipelines, workflow orchestration, and the development of autonomous AI systems.
+
+## Author
+
+**Udaykaran Singh**
+
+B.Tech – Data Science  
+National Institute of Technology, Jalandhar
+
+- GitHub: [Udaykaran-Singh](https://github.com/Udaykaran-Singh)
 
 ---
 
-**Exploring the future of AI, one agent at a time.** 🚀
+⭐ If you find this repository useful, feel free to explore the implementations and learn along!
